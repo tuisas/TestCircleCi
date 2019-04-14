@@ -55,11 +55,11 @@ gulp.task('html', function() {
 gulp.task('serve', gulp.series('sass', 'html', 'scripts', 'assets', function() {
   browserSync.init({
     server: './dist',
-    open: true // set to false to disable browser autostart
+    open: false // set to false to disable browser autostart
   });
   gulp.watch('app/scss/**/*', gulp.series('sass'));
   gulp.watch('app/content/*.html',  gulp.series('html'));
-  gulp.watch('app/partials/*.html', gulp.series('html'));
+  //gulp.watch('app/partials/*.html', gulp.series('html'));
   gulp.watch('app/js/*.js',  gulp.series('scripts'));
   gulp.watch('app/assets/**/*', gulp.series('assets'));
   gulp.watch('dist/*.html').on('change', browserSync.reload);
