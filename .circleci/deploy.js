@@ -1,5 +1,3 @@
-// deploy.js
-#!/usr/bin / env node
 const fs = require('fs');
 const FtpClient = require('ftp');
 const glob = require('glob');
