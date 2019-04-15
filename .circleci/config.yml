@@ -6,7 +6,7 @@ jobs:
      steps:
        - checkout
        - run: npm install
-       - run: npx gulp build
+       #- run: npx gulp build
        - run: node .circleci/deploy.js
        - run: echo "WE'RE ONLINE"
 
