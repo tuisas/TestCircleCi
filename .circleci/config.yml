@@ -1,28 +1,21 @@
 version: 2
 jobs:
-  deploy:
-    docker:
-      - image: circleci/php:7.1.5-browsers
- 
-    working_directory: ~/repo
- 
-    steps:
-      - checkout
- 
-      - run: 
-          name: Deploy Master Branch
-          command: |
-            sudo apt-get update
-            sudo apt-get -qq install git-ftp
-            echo "Deploying project ..."
-            echo $(git status)
-            git ftp init --init-if-not-exist --user "${FTP_USER}" --passwd "${FTP_PASSWORD}" ${FTP_HOST}
- 
+   build:
+     docker:
+       - image: circleci/node:latest
+     steps:
+       - checkout
+       - run: npm install
+       #- run: npx gulp build
+       - run: node .circleci/deploy.js
+       - run: echo "WE'RE ONLINE"
+
 workflows:
   version: 2
-  just-deploy:
+  deploy:
     jobs:
-      - deploy:
+      - build:
           filters:
             branches:
-              only: master
+              only:
+                - master
