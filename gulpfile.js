@@ -47,8 +47,8 @@ gulp.task('sass', function() {
 gulp.task('html', function() {
   return gulp
     .src('./app/content/*.html')
-    //.pipe(headerfooter.header('./app/partials/header.html'))
-    //.pipe(headerfooter.footer('./app/partials/footer.html'))
+    .pipe(headerfooter.header('./app/partials/header.html'))
+    .pipe(headerfooter.footer('./app/partials/footer.html'))
     .pipe(gulp.dest('./dist/'));
 });
 
