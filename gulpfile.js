@@ -4,8 +4,8 @@ var merge = require('merge-stream');
 gulp.task('copy', function() {
 	var allStreams = [
 		gulp.src('./app/assets/**/*').pipe(gulp.dest('./dist/assets/')),
-		gulp.src('./app/content/*.html')pipe(gulp.dest(./dist/))
-	]
+		gulp.src('./app/content/*.html').pipe(gulp.dest('./dist/')),
+	];
 	return merge.apply(this, allStreams);
 });
 gulp.task('build', [copy], funtion(){
