@@ -8,7 +8,7 @@ gulp.task('copy', function() {
 	];
 	return merge.apply(this, allStreams);
 });
-gulp.task('build', [copy], funtion(){
+gulp.task('build', [copy], function(){
 
 });
 
