@@ -7,7 +7,7 @@ var config = {
     host: process.env.FTPHOST,
     port: 21,
     localRoot: __dirname + "/../dist/",
-    remoteRoot: "/",
+    remoteRoot: "/htdocs/AlexTest",
     include: ['*']
 }
     
@@ -15,5 +15,3 @@ ftpDeploy.deploy(config, function(err) {
     if (err) console.log(err)
     else console.log('finished');
 });
-
-ftpupload.net/htdocs/AlexTest
