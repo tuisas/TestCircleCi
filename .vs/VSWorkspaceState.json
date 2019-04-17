@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.circleci"
+    "\\.circleci",
+    "\\app",
+    "\\app\\assets",
+    "\\app\\assets\\img"
   ],
-  "SelectedNode": "\\.circleci\\deploy.js",
+  "SelectedNode": "\\.circleci\\config.yml",
   "PreviewInSolutionExplorer": false
 }

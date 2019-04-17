@@ -7,7 +7,9 @@ jobs:
        - checkout
        - run: npm install
        - run: npm audit fix
-       - run: npm install -g browserify browserify-incremental --save
+       - run: sudo chown -R $USER ~/.npm
+       - run: sudo chown -R $USER /usr/lib/node_modules
+       - run: sudo chown -R $USER /usr/local/lib/node_modules
        - run: npx gulp build
        - run: node .circleci/deploy.js
        - run: echo "WE'RE ONLINE"
