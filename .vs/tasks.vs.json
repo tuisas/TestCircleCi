@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-JCCF 2018 116",
+      "appliesTo": "app/assets/JCCF 2018 116.jpg",
+      "type": "launch"
+    }
+  ]
+}
