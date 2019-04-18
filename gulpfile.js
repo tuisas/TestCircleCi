@@ -1,3 +1,13 @@
+/* Code Author Alejandro Gavilanes
+ * version = 1
+ * version = Date 18-apr-2019
+ * Note = This code is used by CircleCI project to create a Continues delivery from GIT hub project.
+ * Code has been adjusted to work with project https://github.com/tuisas/TUILinksPage directory structure
+ * We use the JS GULP function to copy data from GITHUB to container that can then be used to deploy to FTP Server
+ * This file must be loaded to GIT project so CircleCI can execute tasks
+ */
+
+// declare contanst for depencies used on code
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -10,13 +20,18 @@ const plumber = require( 'gulp-plumber' );
 const beep = require( 'beepbeep' );
 const notify = require( 'gulp-notify' ); // Sends message notification to you.
 
-
+// error handler
 const errorHandler = r => {
 	notify.onError( '\n\n❌  ===> ERROR: <%= error.message %>\n' )( r );
 	beep();
 };
 
-gulp.task('images', function() {
+/* gulp task format used to look at GIT project directory src and then dest is the location on docker container
+ * that is initiated during deployment step on circleci
+ * this function will look at all files in traget directory and copy including sub folders using double star on src
+ * The task function name can be set to anything, but should be relevant
+ */
+gulp.task('images', function () {
   return gulp.src('./App/images/**/*').pipe(gulp.dest('./dist/images/'));
 });
 
@@ -44,8 +59,20 @@ gulp.task('scripts', function () {
     return gulp.src('./App/scripts/**/*').pipe(gulp.dest('./dist/scripts/'));
 });
 
+gulp.task('html', function () {
+    return gulp.src('./App/*.html').pipe(gulp.dest('./dist/'));
+});
 
-/*gulp.task('scripts', function() {
+gulp.task('htaccess', function () {
+    return gulp.src('./App/.htaccess').pipe(gulp.dest('./dist/'));
+});
+
+
+/*
+ * Function commented out due to problems with JS that was rendering index.html not to load JS, browserfiy or uglify could be root cause
+ * will need testing to make sure this does not corrupt JS when deployed to FTP server
+ 
+ gulp.task('scripts', function() {
   return gulp
     .src('App/scripts/*.js')
 		.pipe( plumber( errorHandler ) )
@@ -57,8 +84,13 @@ gulp.task('scripts', function () {
     .pipe(browserify()) 
     .pipe(uglify())
     .pipe(gulp.dest('./dist/scripts/'));
-}); */
+}); 
+ */
 
+/* gulp task format used to look at GIT project directory src and then dest is the location on docker container
+ * that is initiated during deployment step on circleci
+ * This gulp function has a error handler to check css and scss syntax
+ */ 
 gulp.task('sass', function() {
   return gulp
     .src('./App/css/*.css')
@@ -69,19 +101,11 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('html', function() {
-  return gulp
-    .src('./App/*.html')
-    .pipe(gulp.dest('./dist/'));
-});
-
-gulp.task('htaccess', function () {
-    return gulp
-        .src('./App/.htaccess')
-        .pipe(gulp.dest('./dist/'));
-});
 
 
+/*This task used to watch directorys on GIT hub and then add to series for use on Build task
+ * also broswerSync is used to refresh key files on web server
+ */
 gulp.task('serve', gulp.series('sass', 'html', 'scripts', 'images', function() {
   browserSync.init({
     server: './dist',
@@ -101,5 +125,8 @@ gulp.task('serve', gulp.series('sass', 'html', 'scripts', 'images', function() {
   gulp.watch('dist/*.html').on('change', browserSync.reload);
 }));
 
+/*we have the build task that gathers all other tasks above apart from serve and then is ready for FTP upload
+ * default task runs the serve task as final step
+ */ 
 gulp.task('build', gulp.series('admin','apps','client', 'sass', 'discretion', 'fonts', 'images', 'scripts', 'html' , 'htaccess'));
 gulp.task('default', gulp.series('serve'));
