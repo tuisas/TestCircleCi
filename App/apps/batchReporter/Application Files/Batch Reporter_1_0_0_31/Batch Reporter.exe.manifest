@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Batch Reporter.exe" version="1.0.0.31" publicKeyToken="ad5357147214c290" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Batch Reporter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Batch Reporter.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Batch Reporter.exe" size="45040">
+      <assemblyIdentity name="Batch Reporter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>QkLS7YhFvPGcuQzcBYDimpjUaNujXHRmDbkfEpIIol4=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Domain.dll" size="70144">
+      <assemblyIdentity name="Domain" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>AXc8znvrT1IaCAIm83eM/BXT/Muh9Tny7a9Hfr5Y7Tw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DTO.dll" size="7680">
+      <assemblyIdentity name="DTO" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>WJ3HHBtTpaLAv7z0rZxjuAdx/mNI/TRRSmoxN/tMaMY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Oracle.ManagedDataAccess.dll" size="4877312">
+      <assemblyIdentity name="Oracle.ManagedDataAccess" version="4.122.1.0" publicKeyToken="89B483F429C47342" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DYrMyQdPkxpDGIGWRmi2mfZUivi2Sk7TEdSEaxygQ3Y=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Persistance.dll" size="24576">
+      <assemblyIdentity name="Persistance" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>9eOLUV5VLEocV5RaDQMaujqdlIjIMUd1VQoixxg51Kc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Batch Reporter.exe.config" size="1838">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>izIBjPff6qE84w+yPeDzEg+wA7L1w3I8k5IAJi+gP8A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="tui.ico" size="2102">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4R89lkwMv3/UJTSIy/wQmXZ8Qs4DykZodU1mJ+O7JgM=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=TUIAD\david.bracken" issuerKeyHash="d36750229d4db682fc26bd46edd81003a2deda80" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Ecb6WEF72L6juR/BXrYPHiXHDq/lrv1xHF7OO68Uzwo=</DigestValue></Reference></SignedInfo><SignatureValue>iH1faRk9sJDHUHjd4v+E7P82uq5wDIt+nLRzdn4NtUzwRTbl9tIxkVGZUDmYNbHCS6/smywUBrlHrnpPojzGNe3ahNtmbbNNIRgZLi8yj4D5omD7obgKYNPQW71HdYfFf51bzprbfTGWuhjxQE5lePCRcPACn8Wcb3D3HQ+ian0=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ioz+a/ROdawWl+vSfBLSe74S/0YXE7Kyz/helHlSmHcR4Dcy9Lr6MPhvMeBKkl++f2mlQo3EMM71BjaUj+9YIni2ktyHAJhCrjvrSO59ousHsNbVqPqlQLRBTzdBgOluM67KaXfWTNil4lD80u1EpzJNlZTpFJwK0pFE3Fwukzc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="0acf14af3bce5e1c71fdaee5af0ec7251e0fb65ec11fb9a3bed87b4158fac611" Description="" Url=""><as:assemblyIdentity name="Batch Reporter.exe" version="1.0.0.31" publicKeyToken="ad5357147214c290" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=TUIAD\david.bracken</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>vrGem6wKj9PBlqsVxaQyjmqRdVzIl8Fgy91KGbimKK4=</DigestValue></Reference></SignedInfo><SignatureValue>bHVAMMOXlLoayXD16o2aAlS29SkIIaoYF47fJZzqvOEFORKExOmd++F08VAypoFJUP3NrTudFMzy0IPgl3HjAw2oKlKdL1ZZOk07LJjP49jA36IDdbQzxFGQgpUYuYaMdVzWclS2F3YIyJyuuO1vjpz+1q4yush3ddeVa2SGUIE=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ioz+a/ROdawWl+vSfBLSe74S/0YXE7Kyz/helHlSmHcR4Dcy9Lr6MPhvMeBKkl++f2mlQo3EMM71BjaUj+9YIni2ktyHAJhCrjvrSO59ousHsNbVqPqlQLRBTzdBgOluM67KaXfWTNil4lD80u1EpzJNlZTpFJwK0pFE3Fwukzc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQXG4HlJ8QMqBBiaM9J5Qv7DANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDHiYAVABVAEkAQQBEAFwAZABhAHYAaQBkAC4AYgByAGEAYwBrAGUAbjAeFw0xODA3MjMxMzE5MjZaFw0xOTA3MjMxOTE5MjZaMDExLzAtBgNVBAMeJgBUAFUASQBBAEQAXABkAGEAdgBpAGQALgBiAHIAYQBjAGsAZQBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCKjP5r9E51rBaX69J8EtJ7vhL/RhcTsrLP+F6UeVKYdxHgNzL0uvow+G8x4EqSX75/aaVCjcQwzvUGNpSP71gieLaS3IcAmEKuO+tI7n2i6wew1tWo+qVAtEFPN0GA6W4zrsppd9ZM2KXiUPzS7USnMk2VlOkUnArSkUTcXC6TNwIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAFtTdzL3Vt8wu24/H7o8Cm9uEvf5MznRRD01Rm4VJEc8bHqIeM5Z5PYaUMn7ekSxjzpjtFVxhfMu/jFAEJ5lL2gkJVmNzv7yxu7t970fZGO+21ra310N7ZA2RXeUFG5Xo/hRSZ3TkLM9ku12zsXI344jNIvM4YuOvSxf/3Z3OFgC</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

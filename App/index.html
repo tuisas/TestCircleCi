@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Links | TUI Crew Planning Systems Portal</title>
+
+  <!-- Google Analytics (legacy) -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-100556063-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!-- End Google Analytics -->
+
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script src="scripts/logic.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  <style>
+    label[for*='2']:before {
+      content: '\f072';
+    }
+
+    label[for*='3']:before {
+      content: '\f108';
+    }
+
+    label[for*='4']:before {
+      content: '\f0a1';
+    }
+
+    #content1 div, #content3 div {
+      break-inside: avoid-column;
+      page-break-inside: avoid;
+    }
+
+    #content1 div, #content2 div, #content3 div {
+      margin-bottom: 15px;
+      height: 104px;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
+
+    #content1 p b, #content2 p b, #content3 p b, #content3 .mainheading {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    #content1 form select, #content2 form select {
+      background-color: rgb(255, 255, 255); 
+      color: rgb(0, 0, 0); 
+      left: 3px; 
+      width: 240px; 
+      height: 25px;
+      margin-right: 5px;
+    }
+
+    #content1 form span, #content2 form span, #content3 form span {
+      font-style: italic;
+      font-size: 13px;
+      line-height: 20px;
+      font-size-adjust: none;
+      color: rgb(0, 0, 0);
+    }
+
+    #content3 .mainheading {
+      column-span: all;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    #content3 div form {
+      margin-top: 15px;
+    }
+
+    #content3 form select {
+      background-color: rgb(255, 255, 255); 
+      color: rgb(0, 0, 0); 
+      left: 3px; 
+      width: 200px;
+      height: 25px;
+      margin-right: 5px;
+    }
+
+    #content3 div .subheading, #content4 .mainheading {
+      font-weight: 600;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- The 'wrap' div contains the whole page backgrounds to simulate a CSS background-image -->
+  <div id="wrap">
+    <!-- These backgrounds are animated, so they change depending on what tab is selected -->
+    <img class="bgfade" id="bg1" src="images/backgrounds/portal/1.jpg">
+    <img class="bgfade" id="bg2" src="images/backgrounds/portal/2.jpg">
+    <img class="bgfade" id="bg3" src="images/backgrounds/portal/3.jpg">
+    <img class="bgfade" id="bg4" src="images/backgrounds/portal/4.jpg">
+  </div>
+
+  <div id="main_logo"></div>
+
+  <!-- 
+  // This modal is not currently used
+  <div id="openModal" class="modalDialog">
+    <div>
+    <a href="#close" title="Close" class="close">X</a>
+      <h2>Modal Box</h2>
+      <p>This is a sample modal box that can be created using the powers of CSS3.</p>
+      <p>You could do a lot of things here like have a pop-up ad that shows when your website loads, or create a login/register form for users.</p>
+    </div>
+  </div>
+  -->
+
+<main style="max-width: 740px;">
+  <!-- These correspond to the tabs at the top of the page navigator -->
+  <input id="tab0" type="button" name="tabs" onclick="window.location='http://tui-portal.epizy.com'">
+  <label for="tab0">Home</label>
+
+  <input id="tab1" type="radio" name="tabs" checked onclick="setTitle('Links | Crew Planning Systems Portal'); anim('bg1')">
+  <label for="tab1">Links</label>
+    
+  <input id="tab2" type="radio" name="tabs" onclick="setTitle('Carmen | Crew Planning Systems Portal'); anim('bg2')">
+  <label for="tab2">Carmen</label>
+    
+  <input id="tab3" type="radio" name="tabs" onclick="setTitle('Apps | Crew Planning Systems Portal'); anim('bg3')">
+  <label for="tab3">Apps</label>
+
+  <input id="tab4" type="radio" name="tabs" onclick="setTitle('Feedback | Crew Planning Systems Portal'); anim('bg4')">
+  <label for="tab4">Feedback</label>
+  
+  <!-- The page content of each tab is defined by each section tag -->
+  <section id="content1" class="twoColumns">
+    <!-- Tab 1 (Links) -->
+    <div>
+        <p><b>Portals</b></p>
+        <form name="portal">
+          <select name="portalSelector" onchange="displayDescription(this, portalDesc, 'portalSelected')">
+            <option selected="selected" value="http://wotcitrix.tui.de.insite" target="_blank">Citrix IDPS applications</option>
+            <option value="https://crewportal.tui.co.uk" target="_blank">Crew Portal</option>
+            <option value="client/unc-paths/crewing_toolkit.cmd">Crewing Toolkit</option>
+            <option value="client/unc-paths/master_crew_list.cmd">Leave team database</option>
+            <!-- Note: this intranet link is redundant because there is already a dedicated intranet tab -->
+            <!-- <option value="https://uki.tuismile.com" target="_blank">Smile Intranet</option> -->
+          </select>
+          <input value="Go" onclick="jumpToLink(document.portal.portalSelector)" class="buttonSmall" type="button">
+          <br />
+          <span id="portalSelected">
+          </span>
+        </form>
+    </div>
+
+    <div>
+        <p><b>Miscellaneous</b></p>
+        <form name="miscApp">
+            <select name="miscAppSelector" onchange="displayDescription(this, miscApps, 'miscAppsSelected')">
+                <option selected="selected" value="http://aqdportal-live.thomsonuk.dnsroot.biz/AQDPORTAL" target="_blank">AQD</option>
+                <option value="https://signin.webex.com/collabs/auth" target="_blank">Cisco WebEx</option>
+                <option value="client/documents/crewdataformtemplatev11_distributed.pdf" target="_blank">Crew Data form</option>
+                <option value="https://tui.efosweb.com" target="_blank">Crew Leave</option>
+                <option value="https://tuicrewroster.tuigroup.com/crew-app/page/index.html" target="_blank">Crew Roster App</option>
+                <option value="client/unc-paths/eflightlog.cmd">eFlightLog</option>
+                <option value="http://openreports.thomsonuk.dnsroot.biz:8080/openreports" target="_blank">OpenReports</option>
+                <option value="http://idpsapp.tui.de/xmlpserver/servlet/home" target="_blank">Oracle BI Publisher</option>
+                <option value="http://idpsapp.tui.de.insite/discoverer/plus" target="_blank">Oracle Discover</option>
+                <option value="https://thomson.frmsc.com" target="_blank">SAFE</option>
+                <option value="http://partnerweb/beplanned/Mainstream/Departments/Airline/AirlineOPS/default.aspx" target="_blank">SharePoint</option>
+                <option value="http://tuwigmws20ylj32.tuiad.net:8080">Spiceworks Helpdesk</option>
+                <option value="client/documents/newuseraccessrequestPDF_v1.2_distributed.pdf" target="_blank">Systems Access request form</option>
+                <option value="http://tapreports.thomsonuk.dnsroot.biz/tap_live/Login.aspx" target="_blank">TAP</option>
+                <option value="http://hajas600uamp1.tuid.msds.insite/CourionARMS/AspxCommon/Login.aspx" target="_blank">UAM</option>
+            </select>
+          <input value="Go" onclick="jumpToLink(document.miscApp.miscAppSelector)" class="buttonSmall" type="button">
+          <br />
+          <span id="miscAppsSelected">
+          </span>
+        </form>
+    </div>
+
+    <div>
+      <p><b>IDPS</b></p>
+      <form name="app">
+          <select name="appSelector" onchange="displayDescription(this, appDesc, 'appSelected')">
+              <option selected="selected" value="http://hajas600ris01.tuid.msds.insite/idpsais/flights" target="_blank">AIS</option>
+              <option value="http://idpsapp.tui.de/sso/pls/idps/f?p=125:14" target="_blank">APIS</option>
+              <option value="http://arcomhlf.hlf.de.insite/arcomhist/" target="_blank">Ar-Com History</option>
+              <option value="http://hajas600cap2.tuid.msds.insite:8080/cap/webstart/app.jnlp">CAP</option>
+              <optgroup label="E-Files App">
+                  <option value="https://efile.tuifly.com/coursetfl_prod/webstart/app.jnlp">E-Files (Arkefly)</option>
+                  <option value="https://efile.tuifly.com/coursetom_prod/webstart/app.jnlp">E-Files (TOM)</option>
+                  <option value="https://efile.tuifly.com/coursetui_prod/webstart/app.jnlp">E-Files (TUI Fly)</option>
+                  <option value="https://efile.tuifly.com/coursejaf_prod/webstart/app.jnlp">E-Files (TUI JetAir)</option>
+                  <option value="https://efile.tuifly.com/courseblx_prod/webstart/app.jnlp">E-Files (TUI Nordic)</option>
+              </optgroup>
+              <optgroup label="E-Files Web">
+                  <option value="https://efile.tuifly.com/coursetfl_prod/web" target="_blank">E-Files Web (Arkefly)</option>
+                  <option value="https://efile.tuifly.com/coursetom_prod/web" target="_blank">E-Files Web (TOM)</option>
+                  <option value="https://efile.tuifly.com/coursetui_prod/web" target="_blank">E-Files Web (TUI Fly)</option>
+                  <option value="https://efile.tuifly.com/coursejaf_prod/web" target="_blank">E-Files Web (TUI JetAir)</option>
+                  <option value="https://efile.tuifly.com/courseblx_prod/web" target="_blank">E-Files Web (TUI Nordic)</option>
+              </optgroup>
+              <option value="https://tui-staging.efosweb.com" target="_blank">E-FOS Leave System</option>
+              <option value="http://idpsapp.tui.de.insite/pls/idps/f?p=114" target="_blank">Flightinfo</option>
+              <option value="http://idpsapp.tui.de.insite/pls/idps/f?p=133:1:::::P1_P_NR,P1_P_OWNER:214117,BAL" target="_blank">IDPS Self Service</option>
+              <option value="http://hajas600oa24.tuid.msds.insite:8080/cdd3/chooseDutySheets.do?airlineX=BAL&opsManServer=corbaloc:iiop:hajas600oa36.tuid.msds.insite:8852" target="_blank">Live roster duty sheets</option>
+              <option value="http://vlx0257.tui.de.insite/fileXchange/public" target="_blank">Netline Exchange</option>
+              <optgroup label="Prodefis TPMS">
+                  <option value="https://atqp.tuifly.com/atqptom/webstart/app.jnlp">TPMS App (TOM)</option>
+                  <option value="https://atqp.tuifly.com/atqptom/start_atqp.html" target="_blank">TPMS Web (TOM)</option>
+                  <option value="https://services.prodefis.de/atqpblx/blx/blx.jnlp">TPMS App (TUI Nordic)</option>
+                  <option value="https://services.prodefis.de/atqpblx/start_atqp.html" target="_blank">TPMS Web (TUI Nordic)</option>
+              </optgroup>
+              <option value="http://hajas600ris01.tuid.msds.insite/idpsais/roster" target="_blank">RIS</option>
+              <option value="http://idpsapp.tui.de/skycon_prod" target="_blank">SkyCon</option>
+              <option value="https://analytics.tui.de.insite" target="_blank">Tibco Spotfire</option>
+          </select>
+        <input value="Go" onclick="jumpToLink(document.app.appSelector)" class="buttonSmall" type="button">
+        <br />
+        <span id="appSelected">
+        </span>
+      </form>
+    </div>
+
+    <div>
+        <p><b>Drive Mapping scripts</b></p>
+        <form name="driveMap">
+          <select name="driveMapSelector" onchange="displayDescription(this, driveMaps, 'driveMapSelected')">
+            <option selected="selected" value="client/drive-maps/all_drives.cmd">All network drives</option>
+            <option value="client/drive-maps/carmen.cmd">Carmen drives</option>
+            <option value="client/drive-maps/catering.cmd">Catering drives</option>
+            <option value="client/drive-maps/batch_legality_analyser.cmd">B:\ - Batch Legality Analyser</option>
+            <option value="client/drive-maps/all_users.cmd">J:\ - All Users</option>
+            <option value="client/drive-maps/hotac.cmd">L:\ - Hotac</option>
+            <option value="client/drive-maps/crew_planning.cmd">P:\ - Crew Planning</option>
+            <option value="client/drive-maps/cabin_crew.cmd">R:\ - Cabin Crew</option>
+            <option value="client/drive-maps/establishment.cmd">S:\ - Establishment</option>
+            <option value="client/drive-maps/crew_training.cmd">T:\ - Crew Training</option>
+            <option value="client/drive-maps/training.cmd">T:\ - Training</option>
+            <option value="client/drive-maps/airline_training_records.cmd">X:\ - Airline Training Records</option>
+          </select>
+          <input value="Map" onclick="jumpToLink(document.driveMap.driveMapSelector)" class="buttonSmall" type="button">
+          <br />
+          <span id="driveMapSelected">
+          </span>
+        </form>
+      </div>
+  </section>
+    
+  <section id="content2" class="twoColumns">
+    <!-- Tab 2 (Carmen) -->
+    <p class="browserWarning" style="background-color: #ffffb3;">Some features on this page might only work properly in Internet Explorer</p>
+    <ul>
+      <li><a href="client/config/CARMEN-prod/tom-prod-C23_PROD_user-jcp.eod8">Pairings</a></li>
+      <li><a href="client/config/CARMEN-prod/tom-prod-C23_PROD_user-jcr.eod8">Rostering</a></li>
+      <li><a href="client/config/CARMEN-nero/tom_prod_C23_PROD_NERO3_user-jcp.eod8">FD Nero 3 Pairings</a></li>
+      <li><a href="client/config/CARMEN-nero/tom_prod_C23_PROD_NERO3_user-jcr.eod8">FD Nero 3 Rostering</a></li>
+      <li><a href="http://airlineapps.thomsonuk.dnsroot.biz/idps/carmenextract/carmen_extract.php" target="_blank">Carmen Extract</a></li>
+      <li><a href="http://airlineapps.thomsonuk.dnsroot.biz/idps/carmenimport/carmenimport_live/index.php" target="_blank">Carmen Import</a></li>
+      <li><a href="http://airlineapps.thomsonuk.dnsroot.biz/Airline/app/GOS/carmen.php" target="_blank">Carmen Import Status</a></li>
+      <li><a href="client/unc-paths/prod_carmen_output.cmd">Carmen Extract Output</a></li>
+      <li><a href="client/unc-paths/prod_carmen_solution.cmd">Carmen Solutions</a></li>
+    </ul>
+    
+    <br />
+
+    <p><b>Other Jeppesen Carmen Links</b></p>
+    <form name="carmen">
+      <select name="carmenSelector" onchange="displayDescription(this, carmenApps, 'carmenSelected')">
+        <option selected="selected" value="http://password.jepphost.com" target="_blank">Carmen Password Reset</option>
+        <option value="http://airlineapps.thomsonuk.dnsroot.biz/idps/train_duty/index.php" target="_blank">Carmen Inport - Manage Trains</option>
+        <option value="https://crew.tom.jepphost.com" target="_blank">Crew Bid</option>
+        <option value="http://tuwigmap32.thomsonuk.dnsroot.biz/idps/carmenextract/crew_expiry_live/index.php" target="_blank">Crew Corporate Expiry</option>
+        <option value="http://airlineapps.thomsonuk.dnsroot.biz/onestopshopd/app/crewfinder" target="_blank">Crew Finder</option>
+        <option value="http://airlineapps.thomsonuk.dnsroot.biz/idps/crewroom/flights.php" target="_blank">Crew Room Flight List</option>
+        <option value="http://airlineapps.thomsonuk.dnsroot.biz/onestopshopd/app/idpscodes" target="_blank">IDPS Code List</option>
+        <option value="https://vpn.tom.jepphost.com/?src=connect" target="_blank">Jeppesen VPN</option>
+        <option value="http://airlineapps.thomsonuk.dnsroot.biz/idps/carmenextract/nsaexclusion/index.php" target="_blank">NSA Exlusion List</option>
+        <option value="http://airlineapps.thomsonuk.dnsroot.biz/idps/pami/askops.php" target="_blank">PAMI AskOps Extract</option>
+        <option value="http://airlineapps.thomsonuk.dnsroot.biz/idps/Tinc/LoadCourse.php" target="_blank">Register File Transfer</option>
+        <option value="http://airlineapps.thomsonuk.dnsroot.biz/idps/Tinc/init.php" target="_blank">TINC Reports</option>
+      </select>
+      <input value="Go" class="buttonSmall" onclick="jumpToLink(document.carmen.carmenSelector)" type="button">
+      <br />
+      <span id="carmenSelected">
+      </span>
+    </form>
+  </section>
+    
+  <section id="content3">
+  <!-- Tab 3 (Intranet) -->
+  <p class="browserWarning" style="background-color: #ff9b9b;">These apps will only work properly in Internet Explorer</p>
+  <p><b>Dave's Apps</b></p>
+  <ul>
+    <li><a href="apps/AdhocAPIS/Adhoc%20APIS.application">Ad hoc APIS</a></li>
+    <li><a href="apps/APISCrewConfig/CrewApisConfig.application">APIS Crew Configuration</a></li>
+    <li><a href="apps/batchChecker/Batch_Checker.application">Batch Checker</a></li>
+    <li><a href="apps/batchReporter/Batch Reporter.application">Batch Reporter</a></li>
+    <li><a href="apps/discretion/DiscretionDash.application">Discretion Dashboard</a></li>
+  </ul>
+  </section>
+
+  <section id="content4">
+    <!-- Tab 4 (Feedback) -->
+    <p>The Systems Portal has been redesigned. We have tried to keep it as close to the old portal as possible and hope that you will welcome the new design with open arms.</p>
+    <p>If you have noticed any problems with the portal, please email <a href="mailto:SASupport@thomson.co.uk">SASupport@thomson.co.uk</a> and we will investigate.</p>
+  </section>
+
+  <!-- End of all sections -->
+
+  <!-- Don't touch my footer! -->
+  <p id="footer">Crafted with passion by the Systems Team</p>
+  <div id="footer-logo"></div>
+</main>
+<a href="admin/" id="hidden-link"></a>
+</body>
+</html>

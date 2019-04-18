@@ -1,0 +1,1 @@
+start %SystemRoot%\explorer.exe "\\10.145.125.41\zfs4_GOS_UAT_smb\cron\output\pc_reports\CARMEN_EXTRACT_OUTPUT"

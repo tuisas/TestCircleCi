@@ -9,7 +9,7 @@ jobs:
        - run: npm audit fix
        - run: npx gulp build
        - run: node .circleci/deploy.js
-       - run: echo "WE'RE ONLINE"
+       - run: echo "Site has been deployed"
 
 workflows:
   version: 2

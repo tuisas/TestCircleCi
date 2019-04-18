@@ -1,0 +1,26 @@
+php_value display_errors Off
+php_flag magic_quotes 1
+php_flag magic_quotes_gpc 1
+php_value mbstring.http_input auto
+php_value date.timezone Europe/London
+AddType application/octet-stream .eod8
+AddType application/octet-stream .cmd
+AddType application/octet-stream .txt
+AddType application/x-vbscript .vbs
+
+<Directory "/client/drive-map">
+Order allow,deny
+Allow from all
+</Directory>
+
+# -- CACHE CONTROL --
+
+# 1 WEEK FOR IMAGES, CSS, SCRIPT AND BATCH FILES
+<FilesMatch "\.(jpg|jpeg|png|gif|swf|cmd|css|js)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+# 4 DAYS FOR HTML FILES
+<FilesMatch "\.(html|htm|php)$">
+Header set Cache-Control "max-age=345600, private, proxy-revalidate"
+</FilesMatch>

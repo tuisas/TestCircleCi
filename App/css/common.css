@@ -1,0 +1,386 @@
+/* Common CSS styles for the site */
+
+@import url("font-awesome.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,300italic,400italic,600italic,700italic,800italic");
+
+/*
+Font Open Sans supports the following weights:
+    300 (Light)
+    400 (Normal)
+    600 (Semi-bold)
+    700 (Bold)
+    800 (Extra-bold)
+*/
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    color: #404040;
+    font: 14px/1 'Open Sans', sans-serif;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: 1.5;
+}
+
+#wrap {
+    position: fixed; 
+    z-index: -1; 
+    top: 0; 
+    left: 0; 
+    background: transparent;
+}
+
+#wrap img.bgfade {
+    position: absolute;
+    top: 0;
+    display: none;
+    z-index: -1;
+}
+
+#main_logo {
+    margin: 15px auto;
+    background-image: url('../images/WoT_logo.png');
+    width: 335px;
+    height: 71px;
+}
+
+main {
+    min-width: 320px;
+    min-height: 440px;
+    padding: 40px 50px 50px;
+    margin: 0 auto 30px;
+    background: #d1e0ff;
+    display: block;
+    border-radius: 25px;
+    box-shadow: 5px 5px 7px #333333;
+    position: relative;
+}
+
+section {
+    display: none;
+    padding: 20px 0 35px;
+    border-top: 1px solid #b3b3b3;
+}
+
+input {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    text-align: center;
+    color: #999;
+    border: 1px solid transparent;
+    font-weight: 600;
+}
+
+label:before {
+    font-family: fontawesome;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+label[for*='0']:before {
+    content: '\f015';
+}
+
+label[for*='1']:before {
+    content: '\f0c1';
+}
+
+label:hover {
+    color: #737373;
+    cursor: pointer;
+}
+
+input:checked + label {
+    color: #404040;
+    border-left: 1px solid #b3b3b3;
+    border-right: 1px solid #b3b3b3;
+    border-top: 3px solid #6699ff;
+    border-bottom: 1px solid #d1e0ff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    text-shadow: 0 0 .05em #404040;
+}
+
+.buttonLarge {
+    padding: 15px 32px;
+    border-radius: 7px;
+    font-size: 20px;
+    margin: 4px 2px;
+}
+
+.buttonSmall {
+    border-radius: 4px;;
+    font-size: 14px;
+    width: 50px;
+    height: 25px;
+}
+
+.buttonLarge, .buttonSmall {
+    background-color: #467dea; /* Blue */
+    border: none;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttonLarge:hover, .buttonSmall:hover {
+    background-color: #195ee6;
+}
+
+.buttonLarge:active, .buttonSmall:active {
+    background-color: #0f388a;
+}
+
+.hidden {
+    display: none;
+}
+
+.twoColumns {
+    column-count: 2;
+    overflow: hidden;
+}
+
+#content2 .browserWarning:before {
+    content: '\f071';
+    font-family: fontawesome;
+    font-weight: normal;
+    padding-right: 10px;
+}
+
+#content3 .browserWarning:before {
+    content: '\f057';
+    font-family: fontawesome;
+    font-weight: normal;
+    padding-right: 10px;
+}
+
+#content2 .browserWarning, #content3 .browserWarning {
+    display: none;
+    font-weight: 600;
+    line-height: 30px;
+    width: 100%;
+    height: 30px;
+}
+
+#content2 ul, #content3 ul {
+    font-size: 20px;
+    line-height: 35px;
+    list-style: none;
+}
+
+#content2 ul li:before, #content3 ul li:before {
+    font-family: fontawesome;
+    font-size: 20px;
+    content: '\f01d';
+    padding-right: 10px;
+}
+
+#content2 ul a:link, #content2 ul a:visited, #content3 ul a:link, #content3 ul a:visited {
+    text-decoration: none;
+    color: #002466;
+}
+
+#content2 ul a:hover, #content3 ul a:hover {
+    font-weight: 600;
+}
+
+#festive-img {
+    background: url('../images/santahat.png') no-repeat center; 
+    background-size: contain;
+    pointer-events: none;
+    width: 35%;
+    height: 35%;
+    max-height: 154px;
+    display: inline-block; 
+    position: absolute; 
+    top: -70px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+    text-align: right;
+    font-style: italic;
+}
+
+#footer-logo {
+    background: url('../images/120px_TUI_smile.png') no-repeat center; 
+    background-size: contain; 
+    width: 60px; 
+    height: 48px; 
+    display: inline-block; 
+    position: absolute; 
+    bottom: 25px; 
+    left: 25px;
+}
+
+#footer a:link, #footer a:visited {
+    text-decoration: none;
+    color: #404040;
+    font-style: italic;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4 {
+    display: block;
+}
+
+#hidden-link {
+    width: 20px;
+    height: 20px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+/*
+
+// The Modal dialog box is not currently used
+
+.modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { 
+    background: #00d9ff; 
+}
+
+*/
+
+@media screen and (max-width: 650px) {
+    label {
+        font-size: 0;
+    }
+
+    #wrap img.bgfade {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+        z-index: -1;
+    }
+
+    label:before {
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    label {
+        padding: 15px;
+    }
+}
+
+/* Gecko (Firefox) specific */
+@-moz-document url-prefix() {
+    .hidden {
+        display: initial;
+        visibility: hidden;
+    }
+
+    #wrap img.bgfade {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #content2 .browserWarning {
+        display: inline-block;
+        height: 60px;
+        text-align: center;
+    }
+
+    #content3 .browserWarning {
+        display: inline-block;
+        height: 30px;
+        text-align: center;
+    }
+}
+
+/* Webkit (Chrome, Opera) specific */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    #wrap img.bgfade {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #content2 .browserWarning, #content3 .browserWarning {
+        display: block;
+        column-span: all;
+        text-align: center;
+    }
+}

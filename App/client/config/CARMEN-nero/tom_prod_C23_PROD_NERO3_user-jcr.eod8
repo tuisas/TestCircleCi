@@ -1,0 +1,15 @@
+[EOD8CONNECTION]
+
+[EODCONNECTION]
+VERSION=13.8.8.0
+SERVER=prod.tom.jepphost.com
+PORT=5500
+PROFILE=-;MultipleWindow.cfg
+ISGLOBALPROF=1
+XSTART=TUIDKX;tom-prod-C23_PROD_NERO3_user-jcr.xs
+ISGLOBALXS=0
+
+[HCDT]
+ProductKey=Exceed onDemand Client 8 x64 (Web Deployed)
+DeploymentSessionID=HumEoDClient8.X64
+ProductName=Open Text Exceed onDemand Client 8 x64 (Web Deployed)

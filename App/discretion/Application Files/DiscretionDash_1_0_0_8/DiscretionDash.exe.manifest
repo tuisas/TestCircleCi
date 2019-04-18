@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="DiscretionDash.exe" version="1.0.0.8" publicKeyToken="c0ab856e2cfa2829" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="DiscretionDash" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DiscretionDash.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DiscretionDash.exe" size="98288">
+      <assemblyIdentity name="DiscretionDash" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>tVEqakWVbBl0Onpf0m1XMwM8zV2n8lS9GpON/Lv9d1M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Domain.dll" size="17920">
+      <assemblyIdentity name="Domain" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>TrsSaPRShiML7ksADXVmTLI5KsiO/nwfUf4Gb/Qvu5M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Oracle.ManagedDataAccess.dll" size="4934656">
+      <assemblyIdentity name="Oracle.ManagedDataAccess" version="4.122.18.3" publicKeyToken="89B483F429C47342" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>SsdiuNAeFCQ94nkfAgCjTY1wlfyHJi2MEeClmXa7tOg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Persistance.dll" size="9728">
+      <assemblyIdentity name="Persistance" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>RMtsTXHCUWAjdCT567YJTgY8zj4vWP8aaV+rO5Q4oDM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="DiscretionDash.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TuiDiscretion.png" size="62304">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Jc2PxyKYXleMPLyut14MduONw7YiOEtGyRsELhuYyyQ=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=TUIAD\david.bracken" issuerKeyHash="e0fd942cf9c831571cc16f54267c43e4665aaa38" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>/I5alfg0eAi41tJ+9x85aKvjnvE7T+2OSA5ww2Q33/I=</DigestValue></Reference></SignedInfo><SignatureValue>kQETvezaN98jpfMyjExojVDeS+jNSW+NgPS6seICiIspGT1iryFOXx3rGqhbE7dWqUbO6WwEWZKBkHNtkUNppupQja6vwUepVYyo2ygbPE+xmS0JGCHua8cezNeJLkNhHbRnh86vIVcgc6Ie36Alhxj0ftncAh7X6NixvAd0bl4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>pYD8XESKj4LiEpV8qk57IXRTY1bQYad+Zy0jOVrE8Ih6W7houxH6w3HV7c5Z+GHnALm7u0Z69KKh8HIy1GsqW9wVpd4KrK/7fewmy4RsfXgBhIOZGQlwrshpHpN96MzBs6g8MsdbR1ne9kFRzn3cLndabt7xSfHQj/90LaFrD3U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="f2df3764c3700e488eed4f3bf19ee3ab68391ff77ed2d6b8087834f8955a8efc" Description="" Url=""><as:assemblyIdentity name="DiscretionDash.exe" version="1.0.0.8" publicKeyToken="c0ab856e2cfa2829" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=TUIAD\david.bracken</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>3V0XL+HMMHAeHTL+YIyVLX1TdOtar4lA59OYWN0G0Yw=</DigestValue></Reference></SignedInfo><SignatureValue>ao4uqYoq/oFUYbuGVW5apGNt8ko1NK3M91SJPlXO1bARAWn0kxG0QfY8qEBa8yD+qjHIIX/+ePVDktsYCIwxp4dBT74nTEvgsIlIzxQ02av+hd3mzR2++1EZSW3UH8XvDFafeVVnceHzeeD4CXVTQHQhbZ54/5FJcrB0guankKw=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>pYD8XESKj4LiEpV8qk57IXRTY1bQYad+Zy0jOVrE8Ih6W7houxH6w3HV7c5Z+GHnALm7u0Z69KKh8HIy1GsqW9wVpd4KrK/7fewmy4RsfXgBhIOZGQlwrshpHpN96MzBs6g8MsdbR1ne9kFRzn3cLndabt7xSfHQj/90LaFrD3U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQb6UpQD3WAKxMuB3/KPI42TANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDHiYAVABVAEkAQQBEAFwAZABhAHYAaQBkAC4AYgByAGEAYwBrAGUAbjAeFw0xODExMTIxMzQwNDFaFw0xOTExMTIxOTQwNDFaMDExLzAtBgNVBAMeJgBUAFUASQBBAEQAXABkAGEAdgBpAGQALgBiAHIAYQBjAGsAZQBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClgPxcRIqPguISlXyqTnshdFNjVtBhp35nLSM5WsTwiHpbuGi7EfrDcdXtzln4YecAubu7Rnr0oqHwcjLUaypb3BWl3gqsr/t97CbLhGx9eAGEg5kZCXCuyGkek33ozMGzqDwyx1tHWd72QVHOfdwud1pu3vFJ8dCP/3QtoWsPdQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAD5bFgygBXOCGtDKl2yghZl3v43EPh1/7A1sqoF2cRj0wMgdbCzEeBd2MZ0WjxjoNmiRumYoXDxI4VmWu9WaXYd4gl+9YxgziecMC2X08rvz9rUcr2eY820z5SybfL9rsYDPZRGnsX5iX4ph/Y5v7kp37oYqHktKblso6k0a3gAX</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

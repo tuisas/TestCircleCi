@@ -1,0 +1,1 @@
+start %SystemRoot%\explorer.exe "\\gostrn1.thomsonuk.dnsroot.biz\PC_REPORTS\CARMEN_EXTRACT_OUTPUT"

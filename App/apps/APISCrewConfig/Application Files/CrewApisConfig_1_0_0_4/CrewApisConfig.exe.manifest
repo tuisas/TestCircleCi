@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="CrewApisConfig.exe" version="1.0.0.4" publicKeyToken="34c8983608287ee5" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="CrewApisConfig" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="CrewApisConfig.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CrewApisConfig.exe" size="116720">
+      <assemblyIdentity name="CrewApisConfig" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>oceJ0YcM1/oJD/MBKHZ7ePlIYpdiMHzDp7qat1yYC6o=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Oracle.ManagedDataAccess.dll" size="4934656">
+      <assemblyIdentity name="Oracle.ManagedDataAccess" version="4.122.18.3" publicKeyToken="89B483F429C47342" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>SsdiuNAeFCQ94nkfAgCjTY1wlfyHJi2MEeClmXa7tOg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Persistance.dll" size="7168">
+      <assemblyIdentity name="Persistance" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>b8IA2ZnN9rL3c7nX97WmlBPCw0P0qugbKFA5L1Wc9ZU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="CrewApisConfig.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=TUIAD\david.bracken" issuerKeyHash="706d8f3c0259fec298d71bac642a314af41eca89" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>bX2Z3Hc7YrEBJ3/grbfwN/tCsdZ57Ni4zZ3mqcsyzsk=</DigestValue></Reference></SignedInfo><SignatureValue>uTPIAkPJm+l9Ep9hGPVugJ3ZeYR/uULXcuPLxMb1RPtaqNAxv4f1JzDOOEYRpZfIJND+Dv5yqb5TW8pshQvd0qeUbvoKwDPJqfTMxDkH7SoRKSn1r3GWABFUlkFZgiAULEy5Xx2tGGAjpHv214OvtbKln5cj7ly4Sd7Xx87RyMk=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>z1Ulf+GU+WPAkRypab8d8NVOgRJiIJCedwVmWoHRi+iJ+74FXWBVoSzZpNkYd35gqG/9rfcth3Ura87umSn8yqxPpGU6TbaXGv+/i4vby2mNffI8+H0wz5A5cuTNm/Aj5XZ1RQ9ltlVLs1iItyo3Q33YVocXMI2cfQ/ivYryYNc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="c9ce32cba9e69dcdb8d8ec79d6b142fb37f0b7ade07f2701b1623b77dc997d6d" Description="" Url=""><as:assemblyIdentity name="CrewApisConfig.exe" version="1.0.0.4" publicKeyToken="34c8983608287ee5" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=TUIAD\david.bracken</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>uaN6n6WmuQOqE3KKToEz0LwEaiVovHPP2L0BgOvlnKM=</DigestValue></Reference></SignedInfo><SignatureValue>xPzWgLV64zLDPF5vfX7i1fdC/qaDNc1JEw3Z3BAd8r7966qqjb+3KJtNgaPvr1FkQ2cFd53JIKJptyUCGJpJATQLTvDIqd45DCCsQBhLIEs5kMJb4MUrf6j/wbp6EYWaTfveBLjFWrzWNoVCKacU7XVvAe+unHK8Ts5uuF1XUoQ=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>z1Ulf+GU+WPAkRypab8d8NVOgRJiIJCedwVmWoHRi+iJ+74FXWBVoSzZpNkYd35gqG/9rfcth3Ura87umSn8yqxPpGU6TbaXGv+/i4vby2mNffI8+H0wz5A5cuTNm/Aj5XZ1RQ9ltlVLs1iItyo3Q33YVocXMI2cfQ/ivYryYNc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAU6gAwIBAgIQEqgVmgWIHrVAUzv4jCN5ojANBgkqhkiG9w0BAQsFADAxMS8wLQYDVQQDHiYAVABVAEkAQQBEAFwAZABhAHYAaQBkAC4AYgByAGEAYwBrAGUAbjAeFw0xOTAxMDcyMjQzNTNaFw0yMDAxMDgwNDQzNTNaMDExLzAtBgNVBAMeJgBUAFUASQBBAEQAXABkAGEAdgBpAGQALgBiAHIAYQBjAGsAZQBuMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPVSV/4ZT5Y8CRHKlpvx3w1U6BEmIgkJ53BWZagdGL6In7vgVdYFWhLNmk2Rh3fmCob/2t9y2HdStrzu6ZKfzKrE+kZTpNtpca/7+Li9vLaY198jz4fTDPkDly5M2b8CPldnVFD2W2VUuzWIi3KjdDfdhWhxcwjZx9D+K9ivJg1wIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAGWO77w85dNtgott6AduMmawT/DK7wexR27UEKEX4IkHnbS57wtly9t/VVv8g/ONzpB5VI8tdFvRJ/yZgws0MvcO3I9zEa+v8TOgUhyg31V9U+RrNweCXGEDX6mPP8tf8o+Vwko0Vizdqdj5ym0H665BCA5kMxXdArxlGKF7ccBx</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
