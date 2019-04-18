@@ -57,7 +57,7 @@ gulp.task('scripts', function() {
 
 gulp.task('sass', function() {
   return gulp
-    .src('./App/css/*.scss')
+    .src('./App/css/*.css')
 		.pipe( plumber( () => {	notify.onError( '\n\n❌  ===> SASS ERROR %>\n' ) }))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
